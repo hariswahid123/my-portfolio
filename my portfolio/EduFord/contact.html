@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="images/fav-removebg-preview.png"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+      integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>EDUFORD</title>
+  </head>
+  <body>
+    
+    <main class="upper-header">
+    <section class="sub-header">
+        <nav>
+          <a href="index.html"><img src="images/logo.png" alt="" /></a>
+          <div class="nav-links" id="navlinks">
+            <i class="fa-sharp fa-solid fa-xmark fa" onclick="hidemenu()"></i>
+            <ul>
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="about.html">ABOUT</a></li>
+              <li><a href="course.html">COURSE</a></li>
+              <li><a href="blog.html">BLOG</a></li>
+              <li><a href="contact.html">CONTACT</a></li>
+            </ul>
+          </div>
+          <i class="fa-solid fa-bars fa" onclick="showmenu()"></i>
+        </nav>
+  
+        <h1>Contact Us</h1>
+      </section>
+
+<!-- -------------------- CONTACT US -----------------         -->
+
+        <section class="location"> 
+
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d462118.02491053584!2d67.15546194999999!3d25.193202399999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651d4bbf%3A0x9cf92f44555a0c23!2sKarachi%2C%20Karachi%20City%2C%20Sindh!5e0!3m2!1sen!2s!4v1732996315936!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+        </section>
+
+        <section class="contact-us">
+
+           <div class="row">
+
+            <div class="contact-left">
+
+             <div class="contact-col">
+
+                <div>
+
+                  <i class="fa-solid fa-house fa"></i>
+                  <span>
+  
+                     <h5>XYZ Road, ABC Building</h5>
+                     <p>pakistan,karachi IN</p>
+                     
+                  </span>
+
+                    
+                </div>
+
+             </div> 
+
+             <div class="contact-col">
+   
+                   <div>
+   
+                    <i class="fa-solid fa-phone fa"></i>
+                     <span>
+     
+                        <h5>+92 823948002</h5>
+                        <p>Monday To Saturday , 10:00 Am To 6:00 Pm</p>
+                        
+                     </span>
+   
+                       
+                   </div>
+   
+                </div>
+
+           
+                <div class="contact-col">
+   
+                  <div>
+  
+                    <i class="fa-solid fa-envelope fa"></i>
+                    <span>
+    
+                       <h5>info@gamil.com</h5>
+                       <p>Email Us Your Query</p>
+                       
+                    </span>
+  
+                      
+                  </div>
+  
+               </div>
+              </div>
+
+               <div class="contact-right">
+               <div class="contact-col cust">
+
+                   <form action="form-handler.php" method="post">
+
+                     <input type="text" placeholder="Enter Your Name" name="name" required>
+                     <input type="email" placeholder="Enter Email Address" name="email" required>
+                     <input type="text" placeholder="Enter Your Subject" name="subject" required>
+                     <textarea rows="8" placeholder="Message" name="message" required></textarea>
+                     <button type="submit" class="hero-btn red-btn"> Send Message </button>
+                     
+                   </form> 
+
+               </div> 
+              </div>
+
+           </div>
+        </section>
+
+    </main>
+
+
+
+
+
+<!-- ------------------ FOOTER ------------------  -->
+      <section class="footer">
+
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit tempora tempore perspiciatis? 
+         Tenetur <br>inventore odit cumque maxime at deserunt modi,
+         architecto commodi quos debitis!</p>
+     
+          <div class="icon">
+           <i class="fa-brands fa-facebook fa"></i>
+           <i class="fa-brands fa-instagram fa"></i>
+           <i class="fa-brands fa-twitter fa"></i>
+           <i class="fa-brands fa-linkedin fa"></i>
+          </div>
+     
+          <p>Made With <i class="fa-solid fa-heart fa"></i> by Easy Tutorials</p>
+     
+     </section>
+    </main>
+
+
+<!--  %%%%%%%%%%%%%%%% JAVASCRIPT %%%%%%%%%%%%%%%%%%% -->
+
+<script>
+      
+    var navlinks = document.getElementById("navlinks");
+
+    function showmenu(){
+      navlinks.style.right = "0";
+    }
+
+    function hidemenu(){
+      navlinks.style.right = "-200px";
+    }
+
+
+  </script>
+
+  </body>
+</html>

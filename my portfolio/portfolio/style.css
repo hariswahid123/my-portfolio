@@ -1,0 +1,283 @@
+:root {
+    --primary-light: #e0f7ff;
+    --primary-medium: #a3d5f7;
+    --primary-dark: #034f84;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--primary-light);
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    animation: bodyFade 2s ease-in-out;
+  }
+
+  @keyframes bodyFade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  header {
+    background: linear-gradient(to right, #a3d5f7, #cceeff);
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    animation: slideDown 1s ease-in-out;
+  }
+
+  @keyframes slideDown {
+    0% { transform: translateY(-50px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  header::before {
+    content: "🧑‍💻";
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    font-size: 2rem;
+  }
+
+  header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+  }
+
+  nav {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    animation: fadeIn 1.5s ease-in;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: var(--primary-dark);
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+
+  nav a:hover {
+    color: #023e66;
+  }
+
+  nav a[href^="#"]::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary-dark);
+    transition: width 0.3s ease;
+  }
+
+  nav a[href^="#"]:hover::after {
+    width: 100%;
+  }
+
+  section {
+    padding: 60px 20px;
+    animation: fadeInUp 1s ease-in-out;
+  }
+
+  @keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(30px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .about, .services, .portfolio, .mywebsite {
+    background-color: #eaf7ff;
+    margin: 20px auto;
+    padding: 30px;
+    max-width: 1000px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1.2s ease-in-out;
+  }
+
+  .about h2, .services h2, .portfolio h2, .mywebsite h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--primary-dark);
+    font-size: 2rem;
+    animation: zoomIn 1s ease-in;
+  }
+
+  @keyframes zoomIn {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+  }
+
+  .about p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .service-item, .portfolio-item, .website-item {
+    margin-bottom: 25px;
+    padding: 15px;
+    border-left: 4px solid var(--primary-medium);
+    background: #ffffff;
+    border-radius: 8px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .service-item:hover, .portfolio-item:hover, .website-item:hover {
+    transform: translateY(-5px);
+    background-color: #f0fbff;
+  }
+
+  button {
+    background-color: var(--primary-medium);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  button:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.05);
+  }
+
+  footer {
+    background-color: var(--primary-medium);
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+    animation: fadeIn 1s ease-in;
+  }
+
+  footer a {
+    color: #fff;
+    text-decoration: underline;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .project-link {
+    color: #1e90ff; /* Blue color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+  }
+
+  .project-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+    color: #0d74b1; /* Darker blue color on hover */
+  }
+
+  .testimonials {
+    background-color: #f3faff;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .testimonials h2 {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 30px;
+  }
+
+  .testimonial-item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--primary-medium);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .testimonials {
+    background-color: #f3faff;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1000px;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .testimonials h2 {
+    font-size: 2.5rem;
+    color: var(--primary-dark);
+    margin-bottom: 30px;
+  }
+
+  .testimonial-item {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid var(--primary-medium);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .testimonial-item:hover {
+    transform: translateY(-5px);
+    background-color: #f0fbff;
+  }
+
+  .testimonial-item p {
+    font-size: 1.1rem;
+    font-style: italic;
+    color: #555;
+  }
+
+  .testimonial-item footer {
+    font-size: 1rem;
+    color: var(--primary-dark);
+    margin-top: 10px;
+    font-weight: bold;
+  }
+
+  .stars {
+    color: gold;
+    font-size: 1.5rem;
+  }
+
+  .star {
+    margin-right: 5px;
+  }
+
+  .btn-feedback {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--primary-medium);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .btn-feedback:hover {
+    background-color: var(--primary-dark);
+    transform: scale(1.05);
+  }
